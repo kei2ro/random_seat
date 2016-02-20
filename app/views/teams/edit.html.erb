@@ -1,0 +1,14 @@
+<div class="page-title">
+  <h2>グループ名編集</h2>
+</div><!-- page-title -->
+
+<div class="page-content form-new">
+  <%= form_for @team do |f| %>
+    <p><%= f.label "新しいグループ名を入力してください"%></p>
+    <p class="form-field"><%= f.text_field :name %></p>
+     <% if @team.errors.any? %>
+      <p style="color: red;"><%= @team.errors.messages[:name][0] %><p>
+    <% end %>
+    <p class="form-submit"><%= f.submit %></p>
+  <% end %>
+</div> <!-- page-content -->

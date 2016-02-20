@@ -1,0 +1,29 @@
+<div class="page-title">
+  <h2> メンバー一覧 </h2>
+</div><!-- page-title -->
+
+<div class="page-content">
+  <p> グループ名:<%= @team.name %> </p>
+
+  <% @team.members.each do |member| %>
+  <div class="member-box">
+    <p class="member-name">
+        <%= member.name %>
+    </p>
+    <p class="member-delete">
+        <%= link_to "削除", team_member_path(member.team_id, member.id), method: :delete, data: { confirm: "削除しますか？" } %>
+    </p>
+  </div><!-- member-box -->
+  <% end %>
+
+  <p style="clear: both;">
+  <%= form_for [@team, @team.members.build] do |f| %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+  <% end %>
+  </p>
+
+  <p>
+  <%= link_to "席替えする!", randomSeat_path(@team.id) %>
+  </p>
+</div><!-- page-content -->

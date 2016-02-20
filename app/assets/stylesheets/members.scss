@@ -1,0 +1,55 @@
+// Place all the styles related to the Members controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.table-center {
+  width:450px;
+  margin: 0 auto;
+}
+
+.member-box {
+  background: #ecf0f1;
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  float: left;
+}
+
+.member-box .member-name{
+  margin-top: 45px;
+}
+
+.member-box .member-delete{
+  margin-top: 30px;
+}
+
+.member-box p{
+  line-height: 10px;
+  text-align: center;
+}
+
+
+.white-table {
+  background: #ecf0f1;
+  width: 200px;
+  height: 100px;
+  margin-right: 5px;
+  margin-left: 5px;
+  float:left;
+}
+
+// .chair-box {
+//   background: #ecf0f1;
+//   width: 100px;
+//   height: 100px;
+//   margin-right: 5px;
+//   margin-left: 5px;
+//   margin-bottom: 5px;
+//   float: left;
+// }
+//
+// .chair-box p{
+//   text-align: center;
+//   margin: auto 0;
+// }

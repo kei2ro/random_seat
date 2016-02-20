@@ -1,0 +1,19 @@
+<div class="page-title">
+  <h2>グループ一覧</h2>
+</div>
+
+<div class="page-content">
+  <% @teams.each do |team| %>
+    <div class="team-box link-underline-delete">
+        <h3> <%= link_to team.name, team_path(team.id) %> </h3>
+      <p>
+        <%= link_to "削除", team_path(team.id), method: :delete, data: { confirm: "ホントに消して大丈夫?" } %>
+        <%= link_to "編集", edit_team_path(team.id) %>
+      </p>
+    </div><!-- team-box -->
+
+  <% end %>
+  <div class="add-btn link-underline-delete">
+    <p><%= link_to "新規作成", new_team_path  %></p>
+  </div>
+</div><!-- page-content -->

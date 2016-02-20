@@ -1,0 +1,21 @@
+<h2 class="page-title">席替え完了！</h2>
+
+<div class="page-content">
+  <div class="table-center">
+
+    <% count = 0 %>
+    <% @array.each do |a| %>
+      <div class="member-box"> <p class="member-name"> <%= a %> </p> </div>
+      <% if count % 2 == 0%>
+        <div class="white-table"></div>
+      <% else %>
+        <p style="clear:both;"></p>
+      <% end %>
+      <% count = count + 1 %>
+    <% end %>
+
+    <p style="clear: both; text-align: center;">
+      <%= link_to "もう一回", randomSeat_path %>
+    </p>
+  </div><!-- table-center -->
+</div><!-- page-content -->
